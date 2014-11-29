@@ -18,7 +18,7 @@ class Permission extends BaseModel
     public function roles()
     {
         return $this->belongsToMany(
-                \Config::get('verify::models.role'),
+                '\Toddish\Verify\Models\Role',
                 $this->prefix.'permission_role'
             )
         ->withTimestamps();

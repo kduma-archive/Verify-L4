@@ -23,7 +23,7 @@ class BaseModel extends Eloquent
         parent::__construct($attributes);
 
         // Set the prefix
-        $this->prefix = \Config::get('verify::prefix', 'test');
+        $this->prefix = 'verify_';
 
         $this->table = $this->prefix.$this->getTable();
     }
